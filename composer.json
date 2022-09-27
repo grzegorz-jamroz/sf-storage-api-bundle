@@ -1,0 +1,31 @@
+{
+    "name": "grzegorz-jamroz/sf-storage-api-bundle",
+    "description": "Bundle provides basic features for Symfony Storage Api base on source files",
+    "authors": [
+        {
+            "name": "Grzegorz Jamróz",
+            "email": "grzegorz.jamrooz@gmail.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ifrost\\StorageApiBundle\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "grzegorz-jamroz/sf-api-bundle": "^0.0.1",
+        "grzegorz-jamroz/entity-storage": "^0.0.4",
+        "grzegorz-jamroz/sf-api-foundation": "^6.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.11",
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.8"
+    }
+}
