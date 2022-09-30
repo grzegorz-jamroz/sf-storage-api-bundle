@@ -6,6 +6,7 @@ namespace Ifrost\StorageApiBundle\Controller;
 
 use Ifrost\ApiBundle\Controller\ApiController;
 use Ifrost\ApiFoundation\ApiInterface;
+use Ifrost\EntityStorage\Storage\EntityStorageInterface;
 use Ifrost\StorageApiBundle\Attribute\Api;
 use Ifrost\StorageApiBundle\Collection\StorageCollection;
 use Ifrost\StorageApiBundle\Utility\StorageApi;
@@ -27,13 +28,29 @@ class StorageApiController extends ApiController
         return $collection;
     }
 
-    protected function getApi(): ApiInterface
-    {
+    protected function getApi(
+        string $entityClassName = '',
+        ?EntityStorageInterface $storage = null
+    ): ApiInterface {
+        if (
+            $entityClassName !== ''
+            && $storage !== null
+        ) {
+            return new StorageApi($entityClassName, $storage, $this->getApiRequestService());
+        }
+
         $attributes = (new \ReflectionClass(static::class))->getAttributes(Api::class, \ReflectionAttribute::IS_INSTANCEOF);
         $attributes[0] ?? throw new \RuntimeException(sprintf('Controller "%s" has to declare "%s" attribute.', static::class, StorageApi::class));
-        ['entity' => $entity, 'storage' => $storage] = $attributes[0]->getArguments();
-        $storage = $this->getStorages()->get($storage);
 
-        return new StorageApi($entity, $storage, $this->getApiRequestService());
+        if ($entityClassName === '') {
+            $entityClassName = $attributes[0]->getArguments()['entity'];
+        }
+
+        if ($storage === null) {
+            $storageClassName = $attributes[0]->getArguments()['storage'];
+            $storage = $this->getStorages()->get($storageClassName);
+        }
+
+        return new StorageApi($entityClassName, $storage, $this->getApiRequestService());
     }
 }
