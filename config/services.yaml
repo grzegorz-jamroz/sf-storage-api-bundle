@@ -1,0 +1,3 @@
+services:
+  Ifrost\StorageApiBundle\Collection\StorageCollection:
+    tags: [ifrost_api.storage.collection]
