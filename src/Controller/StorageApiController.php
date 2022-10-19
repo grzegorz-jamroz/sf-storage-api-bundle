@@ -42,13 +42,14 @@ class StorageApiController extends ApiController
 
         $attributes = (new \ReflectionClass(static::class))->getAttributes(StorageApiAttribute::class, \ReflectionAttribute::IS_INSTANCEOF);
         $attributes[0] ?? throw new \RuntimeException(sprintf('Controller "%s" has to declare "%s" attribute.', static::class, StorageApiAttribute::class));
+        $attribute = $attributes[0]->newInstance();
 
         if ($entityClassName === '') {
-            $entityClassName = $attributes[0]->getArguments()['entity'];
+            $entityClassName = $attribute->getEntity();
         }
 
         if ($storage === null) {
-            $storageClassName = $attributes[0]->getArguments()['storage'];
+            $storageClassName = $attribute->getStorage();
             in_array(EntityStorageInterface::class, Transform::toArray(class_implements($storageClassName))) ?: throw new \InvalidArgumentException(sprintf('Given argument "storage" (%s) has to implement "%s" interface.', $storageClassName, EntityStorageInterface::class));
             $storage = $this->getStorages()->get($storageClassName);
         }

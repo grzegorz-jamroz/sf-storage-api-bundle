@@ -15,4 +15,9 @@ class StorageApi extends Api
     ) {
         parent::__construct($entity);
     }
+
+    public function getStorage(): string
+    {
+        return $this->storage;
+    }
 }
