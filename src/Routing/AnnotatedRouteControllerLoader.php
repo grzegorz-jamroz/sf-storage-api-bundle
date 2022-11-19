@@ -36,12 +36,12 @@ class AnnotatedRouteControllerLoader
         }
 
         $overwrittenActions = $this->getOverwrittenActions($class);
-        $excludedPaths = array_column($attribute->excludedPaths(), 'value');
+        $excludedActions = array_column($attribute->excludedActions(), 'value');
 
         foreach ($this->getActions() as $action) {
             if (
                 in_array($action['name'], $overwrittenActions)
-                || in_array($action['name'], $excludedPaths)
+                || in_array($action['name'], $excludedActions)
             ) {
                 continue;
             }

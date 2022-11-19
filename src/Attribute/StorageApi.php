@@ -11,13 +11,13 @@ use Ifrost\StorageApiBundle\Utility\Action;
 class StorageApi extends Api
 {
     /**
-     * @param array<int, Action|string> $excludedPaths
+     * @param array<int, Action|string> $excludedActions
      */
     public function __construct(
         string $entity,
         protected string $storage,
         protected string $path = '',
-        protected array $excludedPaths = [],
+        protected array $excludedActions = [],
     ) {
         parent::__construct($entity);
     }
@@ -35,19 +35,19 @@ class StorageApi extends Api
     /**
      * @return array<int, Action>
      */
-    public function excludedPaths(): array
+    public function excludedActions(): array
     {
         return array_reduce(
-            $this->excludedPaths,
-            function (array $carry, Action|string $excludePath) {
-                if ($excludePath instanceof Action) {
-                    $carry[] = $excludePath;
+            $this->excludedActions,
+            function (array $carry, Action|string $excludedAction) {
+                if ($excludedAction instanceof Action) {
+                    $carry[] = $excludedAction;
 
                     return $carry;
                 }
 
-                if (in_array($excludePath, Action::values())) {
-                    $carry[] = Action::fromValue($excludePath);
+                if (in_array($excludedAction, Action::values())) {
+                    $carry[] = Action::fromValue($excludedAction);
                 }
 
                 return $carry;

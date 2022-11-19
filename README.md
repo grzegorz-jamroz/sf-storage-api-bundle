@@ -138,7 +138,7 @@ now output from `php bin/console debug:router` will be:
  ------------------- -------- -------- ------ -------------------------- 
 ```
 
-It is possible do disable some path at all. In this case you can use `excludedPaths` metadata.
+It is possible do disable some actions at all. In this case you can use `excludedActions` metadata.
 
 ```php
 <?php
@@ -159,7 +159,7 @@ use Symfony\Component\Routing\Annotation\Route;
     entity: Product::class,
     storage: ProductStorage::class,
     path: 'products',
-    excludedPaths: [
+    excludedActions: [
         Action::CREATE,
         Action::UPDATE,
         Action::MODIFY,

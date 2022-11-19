@@ -13,7 +13,7 @@ use Tests\Variant\Storage\ProductStorage;
     entity: Product::class,
     storage: ProductStorage::class,
     path: 'products',
-    excludedPaths: [
+    excludedActions: [
         Action::CREATE,
         Action::UPDATE,
         Action::MODIFY,
