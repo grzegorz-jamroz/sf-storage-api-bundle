@@ -1,3 +1,9 @@
 services:
   Ifrost\StorageApiBundle\Collection\StorageCollection:
     tags: [ifrost_api.storage.collection]
+  Ifrost\StorageApiBundle\Routing\AnnotatedRouteControllerLoader:
+  Ifrost\StorageApiBundle\Routing\StorageApiLoader:
+    arguments:
+      $locator: '@file_locator'
+      $loader: '@Ifrost\StorageApiBundle\Routing\AnnotatedRouteControllerLoader'
+    tags: [routing.loader]
