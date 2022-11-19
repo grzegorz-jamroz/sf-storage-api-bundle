@@ -11,9 +11,40 @@ use Ifrost\StorageApiBundle\Attribute\StorageApi as StorageApiAttribute;
 use Ifrost\StorageApiBundle\Collection\StorageCollection;
 use Ifrost\StorageApiBundle\Utility\StorageApi;
 use PlainDataTransformer\Transform;
+use Symfony\Component\HttpFoundation\Response;
 
 class StorageApiController extends ApiController
 {
+    public function find(): Response
+    {
+        return $this->getApi()->find();
+    }
+
+    public function findOne(): Response
+    {
+        return $this->getApi()->findOne();
+    }
+
+    public function create(): Response
+    {
+        return $this->getApi()->create();
+    }
+
+    public function update(): Response
+    {
+        return $this->getApi()->update();
+    }
+
+    public function modify(): Response
+    {
+        return $this->getApi()->modify();
+    }
+
+    public function delete(): Response
+    {
+        return $this->getApi()->delete();
+    }
+
     public static function getSubscribedServices(): array
     {
         return array_merge(parent::getSubscribedServices(), [

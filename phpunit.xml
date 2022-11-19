@@ -16,9 +16,6 @@
         <include>
             <directory suffix=".php">src</directory>
         </include>
-        <exclude>
-            <file>src/Attribute/StorageApi.php</file>
-        </exclude>
     </coverage>
     <testsuites>
         <testsuite name="unit">

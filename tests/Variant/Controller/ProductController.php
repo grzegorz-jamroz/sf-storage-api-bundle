@@ -8,7 +8,7 @@ use Ifrost\StorageApiBundle\Attribute\StorageApi;
 use Tests\Variant\Entity\Product;
 use Tests\Variant\Storage\ProductStorage;
 
-#[StorageApi(entity: Product::class, storage: ProductStorage::class)]
+#[StorageApi(entity: Product::class, storage: ProductStorage::class, path: 'products')]
 class ProductController extends StorageApiControllerVariant
 {
 }

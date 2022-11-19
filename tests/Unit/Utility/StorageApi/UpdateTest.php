@@ -68,5 +68,4 @@ class UpdateTest extends ProductTestCase
         // When & Then
         $storageApi->update();
     }
-
 }
