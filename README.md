@@ -151,7 +151,7 @@ use App\Entity\Product;
 use App\Storage\ProductStorage;
 use Ifrost\StorageApiBundle\Attribute\StorageApi;
 use Ifrost\StorageApiBundle\Controller\StorageApiController;
-use Ifrost\StorageApiBundle\Utility\Action;
+use Ifrost\ApiFoundation\Enum\Action;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
