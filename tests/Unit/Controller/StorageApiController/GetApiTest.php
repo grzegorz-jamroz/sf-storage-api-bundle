@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Controller\StorageApiController;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Controller\StorageApiController;
 
 use Ifrost\ApiBundle\Utility\ApiRequestInterface;
 use Ifrost\ApiFoundation\ApiInterface;
-use Ifrost\EntityStorage\Entity\EntityInterface;
 use Ifrost\EntityStorage\Storage\EntityStorageInterface;
 use Ifrost\StorageApiBundle\Collection\StorageCollection;
+use Ifrost\StorageApiBundle\Entity\EntityInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\Container;
-use Tests\Variant\Controller\InvalidController;
-use Tests\Variant\Controller\ProductController;
-use Tests\Variant\Controller\StorageApiControllerVariant;
-use Tests\Variant\Entity\Product;
-use Tests\Variant\Sample;
-use Tests\Variant\Storage\ProductStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Controller\InvalidController;
+use Ifrost\StorageApiBundle\Tests\Variant\Controller\ProductController;
+use Ifrost\StorageApiBundle\Tests\Variant\Controller\StorageApiControllerVariant;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Product;
+use Ifrost\StorageApiBundle\Tests\Variant\Sample;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\ProductStorage;
 
 class GetApiTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\DependencyInjection\IfrostStorageApiExtension;
+namespace Ifrost\StorageApiBundle\Tests\Unit\DependencyInjection\IfrostStorageApiExtension;
 
 use Ifrost\StorageApiBundle\DependencyInjection\IfrostStorageApiExtension;
 use PHPUnit\Framework\TestCase;

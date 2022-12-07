@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Variant\Controller\Game;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Controller\Game;
 
 use Ifrost\StorageApiBundle\Controller\StorageApiController;
 

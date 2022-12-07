@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Utility\StorageApi;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Utility\StorageApi;
 
 use Ifrost\ApiBundle\Utility\ApiRequestInterface;
 use Ifrost\ApiFoundation\Exception\NotFoundException;
 use Ifrost\StorageApiBundle\Utility\StorageApi;
-use Tests\Unit\ProductTestCase;
-use Tests\Variant\Entity\Product;
+use Ifrost\StorageApiBundle\Tests\Unit\ProductTestCase;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Product;
 
 class ModifyTest extends ProductTestCase
 {

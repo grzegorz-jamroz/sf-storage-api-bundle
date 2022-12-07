@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\DependencyInjection\StoragePass;
+namespace Ifrost\StorageApiBundle\Tests\Unit\DependencyInjection\StoragePass;
 
 use Ifrost\EntityStorage\Storage\EntityStorageInterface;
 use Ifrost\StorageApiBundle\Collection\StorageCollection;
@@ -11,9 +11,9 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
-use Tests\Variant\Sample;
-use Tests\Variant\Storage\ProductStorage;
-use Tests\Variant\Storage\VipProductStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Sample;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\ProductStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\VipProductStorage;
 
 class ProcessTest extends TestCase
 {

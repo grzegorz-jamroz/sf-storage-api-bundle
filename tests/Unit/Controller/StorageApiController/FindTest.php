@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Controller\StorageApiController;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Controller\StorageApiController;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Tests\Unit\Controller\StorageApiControllerTestCase;
+use Ifrost\StorageApiBundle\Tests\Unit\Controller\StorageApiControllerTestCase;
 
 class FindTest extends StorageApiControllerTestCase
 {

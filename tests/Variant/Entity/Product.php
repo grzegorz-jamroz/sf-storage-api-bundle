@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Variant\Entity;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Entity;
 
-use Ifrost\EntityStorage\Entity\EntityInterface;
+use Ifrost\StorageApiBundle\Entity\EntityInterface;
 use PlainDataTransformer\Transform;
 
 class Product implements EntityInterface

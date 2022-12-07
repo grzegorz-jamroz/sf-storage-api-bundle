@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Variant\Storage;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Storage;
 
 use Ifrost\EntityStorage\Storage\JsonEntityStorage;
-use Tests\Variant\Entity\Product;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Product;
 
 class VipProductStorage extends JsonEntityStorage
 {
