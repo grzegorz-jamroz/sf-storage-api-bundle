@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Variant\Controller;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Controller;
 
 use Ifrost\StorageApiBundle\Attribute\StorageApi;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Tests\Variant\Entity\Product;
-use Tests\Variant\Storage\ProductStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Product;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\ProductStorage;
 
 #[StorageApi(entity: Product::class, storage: ProductStorage::class, path: 'products')]
 class ProductControllerWithOverwrittenAction extends StorageApiControllerVariant

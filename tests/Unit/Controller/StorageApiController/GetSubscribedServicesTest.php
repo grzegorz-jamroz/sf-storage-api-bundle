@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Unit\Controller\StorageApiController;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Controller\StorageApiController;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Ifrost\StorageApiBundle\Collection\StorageCollection;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\Container;
-use Tests\Variant\Controller\StorageApiControllerVariant;
+use Ifrost\StorageApiBundle\Tests\Variant\Controller\StorageApiControllerVariant;
 
 class GetSubscribedServicesTest extends TestCase
 {

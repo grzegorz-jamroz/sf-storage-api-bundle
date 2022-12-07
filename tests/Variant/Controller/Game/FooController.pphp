@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Variant\Controller\Game;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Controller\Game;
 
 use Ifrost\StorageApiBundle\Attribute\StorageApi;
 use Ifrost\StorageApiBundle\Controller\StorageApiController;
-use Tests\Variant\Entity\Foo;
-use Tests\Variant\Storage\FooStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Foo;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\FooStorage;
 
 #[StorageApi(entity: Foo::class, storage: FooStorage::class, path: 'foo')]
 class FooController extends StorageApiController

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\IfrostStorageApiBundle;
+namespace Ifrost\StorageApiBundle\Tests\Unit\IfrostStorageApiBundle;
 
 use Ifrost\StorageApiBundle\IfrostStorageApiBundle;
 use PHPUnit\Framework\TestCase;

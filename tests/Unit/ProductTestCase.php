@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit;
+namespace Ifrost\StorageApiBundle\Tests\Unit;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Ifrost\Filesystem\Directory;
 use Ifrost\Filesystem\JsonFile;
 use PHPUnit\Framework\TestCase;
-use Tests\Variant\Entity\Product;
-use Tests\Variant\Storage\ProductStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Product;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\ProductStorage;
 
 class ProductTestCase extends TestCase
 {

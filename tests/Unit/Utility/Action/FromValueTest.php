@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Utility\Action;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Utility\Action;
 
-use Ifrost\StorageApiBundle\Utility\Action;
+use Ifrost\ApiFoundation\Enum\Action;
 use PHPUnit\Framework\TestCase;
 
 class FromValueTest extends TestCase

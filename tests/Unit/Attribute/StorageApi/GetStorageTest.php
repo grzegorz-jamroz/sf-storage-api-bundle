@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Attribute\StorageApi;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Attribute\StorageApi;
 
 use Ifrost\StorageApiBundle\Attribute\StorageApi;
 use PHPUnit\Framework\TestCase;
-use Tests\Variant\Entity\Product;
-use Tests\Variant\Storage\ProductStorage;
+use Ifrost\StorageApiBundle\Tests\Variant\Entity\Product;
+use Ifrost\StorageApiBundle\Tests\Variant\Storage\ProductStorage;
 
 class GetStorageTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Controller\StorageApiController;
+namespace Ifrost\StorageApiBundle\Tests\Unit\Controller\StorageApiController;
 
 use Ifrost\StorageApiBundle\Collection\StorageCollection;
 use Ifrost\StorageApiBundle\Controller\StorageApiController as Controller;

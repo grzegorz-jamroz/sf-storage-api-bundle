@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Variant\Controller;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Controller;
 
 use Ifrost\ApiFoundation\ApiInterface;
 use Ifrost\EntityStorage\Storage\EntityStorageInterface;

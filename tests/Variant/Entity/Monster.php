@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Variant\Entity;
+namespace Ifrost\StorageApiBundle\Tests\Variant\Entity;
 
-use Ifrost\EntityStorage\Entity\EntityInterface;
+use Ifrost\StorageApiBundle\Entity\EntityInterface;
 use PlainDataTransformer\Transform;
 
 class Monster implements EntityInterface
